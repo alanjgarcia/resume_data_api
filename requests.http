@@ -1,0 +1,44 @@
+### Users Index
+GET http://localhost:3000/users.json
+
+### Users Create
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+"first_name": "Peter",
+"last_name": "Jang",
+"email": "peter@test.com", 
+"password_digest": "password",
+"phone_number": "8888888888",
+"linkedin_url": " ",
+"twitter_url": "https://twitter.com/peterxjang",
+"personal_website_url": " ",
+"online_resume_url": " ",
+"github_url": " ",
+"image_url": "https://pbs.twimg.com/profile_images/786652557527683072/NXUuOxS__400x400.jpg"
+}
+
+### Users Show
+GET http://localhost:3000/users/1.json
+
+### Users Update
+PATCH http://localhost:3000/users/4.json
+Content-Type: application/json
+
+{
+"first_name": "Peter",
+"last_name": "Jang",
+"email": "peter@test.com", 
+"password_digest": "password",
+"phone_number": "111111111",
+"linkedin_url": " ",
+"twitter_url": "https://twitter.com/peterxjang",
+"personal_website_url": " ",
+"online_resume_url": " ",
+"github_url": " ",
+"image_url": "https://pbs.twimg.com/profile_images/786652557527683072/NXUuOxS__400x400.jpg"
+}
+
+### Users Destroy
+DELETE http://localhost:3000/users/1.json
