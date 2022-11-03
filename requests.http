@@ -51,8 +51,28 @@ POST http://localhost:3000/experiences.json
 Content-Type: application/json 
 
 {
-  "user_id": 4,
+  "user_id": 5,
   "start_date": "2020-09-19", 
   "end_date": "2024-06-10",
-  
+  "degree": "Computer Science",
+  "university_name": "UIC",
+  "details": "The study of computer systems and the way humans and computers interact from a scientific perspective"
 }
+
+### Experiences Show
+GET http://localhost:3000/experiences/1.json 
+
+### Experiences Update
+PATCH http://localhost:3000/experiences/2.json 
+Content-Type: application/json 
+
+{
+  "user_id": 6,
+  "start_date": "2022-09-15",
+  "end_date": "2026-06-10",
+  "degree": "Sculpture and Ceramics",
+  "university_name": "The Art Institute",
+  "details": "interdisciplinary investigation where art, design, and craft are the fields of research and innovation."
+}
+
+# update action not functional. error msg line 26 in controller
