@@ -8,8 +8,8 @@ Content-Type: application/json
 {
 "first_name": "Peter",
 "last_name": "Jang",
-"email": "peter@test.com", 
-"password_digest": "password",
+"email": "jang@test.com", 
+"password": "password",
 "phone_number": "8888888888",
 "linkedin_url": " ",
 "twitter_url": "https://twitter.com/peterxjang",
@@ -24,6 +24,7 @@ GET http://localhost:3000/users/1.json
 
 ### Users Update
 PATCH http://localhost:3000/users/4.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2Njc1MjY5OTV9.T5Wn26k7B2iiblXaVGvLCzkGSN5k9GrGyluqzXdpzM4
 Content-Type: application/json
 
 {
@@ -42,3 +43,14 @@ Content-Type: application/json
 
 ### Users Destroy
 DELETE http://localhost:3000/users/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2Njc1MjY5OTV9.T5Wn26k7B2iiblXaVGvLCzkGSN5k9GrGyluqzXdpzM4
+
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "jang@test.com",
+  "password": "password"
+}
