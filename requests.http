@@ -43,7 +43,6 @@ Content-Type: application/json
 
 ### Users Destroy
 DELETE http://localhost:3000/users/1.json
-<<<<<<< HEAD
 
 ### Educations Index
 GET http://localhost:3000/educations.json
@@ -78,20 +77,3 @@ Content-Type: application/json
 }
 
 # update action not functional. error msg line 26 in controller
-=======
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2Njc1MjY5OTV9.T5Wn26k7B2iiblXaVGvLCzkGSN5k9GrGyluqzXdpzM4
-
-
-### Sessions create (login)
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
-
-{
-  "email": "jang@test.com",
-  "password": "password"
-}
-
-
-### TO DO 
-## JWT BRACKET AUTHENTICATION 
->>>>>>> c76cedd9d167f34ed7b0d1cfdf8724c102361422
