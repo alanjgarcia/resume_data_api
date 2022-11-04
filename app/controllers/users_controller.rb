@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
-      password_digest: params[:password_digest],
+      password: params[:password],
       phone_number: params[:phone_number],
       linkedin_url: params[:linkedin_url],
       personal_website_url: params[:personal_website_url],
@@ -17,8 +17,11 @@ class UsersController < ApplicationController
       github_url: params[:github_url],
       image_url: params[:image_url],
     )
-    user.save
-    render json: user.as_json
+    if user.save
+      render json: { message: "User created successfully" }, status: :created
+    else
+      render json: { errors: user.errors.full_messages }, status: :bad_request
+    end
   end
 
   def show
