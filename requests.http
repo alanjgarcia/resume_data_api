@@ -54,3 +54,7 @@ Content-Type: application/json
   "email": "jang@test.com",
   "password": "password"
 }
+
+
+### TO DO 
+## JWT BRACKET AUTHENTICATION 
