@@ -43,18 +43,37 @@ Content-Type: application/json
 
 ### Users Destroy
 DELETE http://localhost:3000/users/1.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJleHAiOjE2Njc1MjY5OTV9.T5Wn26k7B2iiblXaVGvLCzkGSN5k9GrGyluqzXdpzM4
 
+### Educations Index
+GET http://localhost:3000/educations.json
 
-### Sessions create (login)
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
+### Educations Create 
+POST http://localhost:3000/educations.json
+Content-Type: application/json 
 
 {
-  "email": "jang@test.com",
-  "password": "password"
+  "user_id": 5,
+  "start_date": "2020-09-19", 
+  "end_date": "2024-06-10",
+  "degree": "Computer Science",
+  "university_name": "UIC",
+  "details": "The study of computer systems and the way humans and computers interact from a scientific perspective"
 }
 
+### Educations Show
+GET http://localhost:3000/educations/1.json 
 
-### TO DO 
-## JWT BRACKET AUTHENTICATION 
+### Educations Update
+PATCH http://localhost:3000/educations/2.json 
+Content-Type: application/json 
+
+{
+  "user_id": 6,
+  "start_date": "2022-09-15",
+  "end_date": "2026-06-10",
+  "degree": "Sculpture and Ceramics",
+  "university_name": "The Art Institute",
+  "details": "interdisciplinary investigation where art, design, and craft are the fields of research and innovation."
+}
+
+# update action not functional. error msg line 26 in controller
