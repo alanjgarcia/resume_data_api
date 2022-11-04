@@ -33,7 +33,14 @@ class UsersController < ApplicationController
     user = User.find_by(id: params[:id])
     user.first_name = params[:first_name] || user.first_name
     user.last_name = params[:last_name] || user.last_name
-    user.height = params[:height] || user.height
+    user.email = params[:email] || user.email
+    user.password = params[:password] || user.password 
+    user.phone_number = params[:phone_number] || user.phone_number
+    user.linkedin_url = params[:linkedin_url] || user.linkedin_url
+    user.personal_website_url = params[:personal_website_url] || user.personal_website_url
+    user.online_resume_url = params[:online_resume_url] || user.online_resume_url
+    user.github_url = params[:github_url] || user.github_url
+    user.image_url = params[:image_url] || user.image_url 
     user.save
     render json: user.as_json
   end
