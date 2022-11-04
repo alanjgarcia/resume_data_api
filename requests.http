@@ -43,11 +43,11 @@ Content-Type: application/json
 ### Users Destroy
 DELETE http://localhost:3000/users/1.json
 
-### Experiences Index
-GET http://localhost:3000/experiences.json
+### Educations Index
+GET http://localhost:3000/educations.json
 
-### Experiences Create 
-POST http://localhost:3000/experiences.json
+### Educations Create 
+POST http://localhost:3000/educations.json
 Content-Type: application/json 
 
 {
@@ -59,11 +59,11 @@ Content-Type: application/json
   "details": "The study of computer systems and the way humans and computers interact from a scientific perspective"
 }
 
-### Experiences Show
-GET http://localhost:3000/experiences/1.json 
+### Educations Show
+GET http://localhost:3000/educations/1.json 
 
-### Experiences Update
-PATCH http://localhost:3000/experiences/2.json 
+### Educations Update
+PATCH http://localhost:3000/educations/2.json 
 Content-Type: application/json 
 
 {

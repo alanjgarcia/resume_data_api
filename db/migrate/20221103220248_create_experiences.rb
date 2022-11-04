@@ -4,8 +4,8 @@ class CreateExperiences < ActiveRecord::Migration[7.0]
       t.integer :user_id
       t.datetime :start_date
       t.datetime :end_date
-      t.string :degree
-      t.string :university_name
+      t.string :job_title
+      t.string :company_name
       t.text :details
 
       t.timestamps
